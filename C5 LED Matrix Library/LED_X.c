@@ -28,6 +28,7 @@ char x_shape[8] = {
 	0b00000000  //notice inverse pattern
 };
 
+
 int main(void) {		
 	DDRB = (1<<CLOCK) | (1<<CS) | (1<<DATA) ;
 
@@ -36,6 +37,7 @@ int main(void) {
 	matrix_data(0x0C,0x1);   //Leave shutdown mode and enter normal operation
 
 	display_image(x_shape);
+	
 	return 0;
 }
 

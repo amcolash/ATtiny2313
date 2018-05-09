@@ -60,15 +60,15 @@ int main(void) {
 	matrix_data(0x0F,0x0);		//Display Test OFF
 	matrix_data(0x0B,0x07);		//Scan Limit to digits 0 to 7.
 	matrix_data(0x0C,1); 		  //Leave shutdown mode and enter normal operation
-	matrix_data(0x0A,0x1);		//Second argument is a number from 0 to 16 (i.e 0x0 to 0xF), to choose intensity.
+	matrix_data(0x0A,0x0);		//Second argument is a number from 0 to 16 (i.e 0x0 to 0xF), to choose intensity.
 
 	while(1) {
 		display_image(smiley_shape);
 		_delay_ms(1000);
 		display_image(scream_shape);
 		_delay_ms(1000);
-		display_image(frown_shape);
-		_delay_ms(1000);
+/*		display_image(frown_shape);*/
+/*		_delay_ms(1000);*/
 	}
 	
 	return 0;
